@@ -48,7 +48,7 @@ change_list.pop(0)
 average_change=round(sum(change_list)/len(change_list),2)
 
 
-
+#Print budget summary
 budget_summary=(
 f"Financial Analysis\n"
 
@@ -66,6 +66,7 @@ f"Greatest Decrease in Profits: {decrease_date}   (${decrease_amount})\n")
 
 print(budget_summary)
 
+#Create and write text file
 text_path="pybank_output.txt"
 
 with open(text_path,'w') as f:

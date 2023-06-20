@@ -1,7 +1,7 @@
 import os
 import csv
 
-election_data_csv=os.path.join('Resources', 'election_data.csv')
+election_data_csv=os.path.join('Resources','election_data.csv')
 #Stating variables
 cast_total=0
 candidate_options=[]
@@ -40,7 +40,8 @@ with open(election_data_csv) as csvfile:
 #Winner of election baseed on popular vote
 
 Winner=max(vote_counter, key=vote_counter.get)
-    
+
+#Print election results    
 election_summary=(
     f"Election Results\n"
 
@@ -64,6 +65,7 @@ election_summary=(
 
 print(election_summary)
 
+#Create and write text file
 text_path="pypoll_output.txt"
 
 with open(text_path,'w') as f:
